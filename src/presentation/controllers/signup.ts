@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
-import { InvalidParamError } from '../errors/invalid-param-error'
-import { MissingParamsError } from '../errors/missing-params-errors'
+import { InvalidParamError, MissingParamsError } from '../errors'
 import { badRequest, serverError } from '../helpers/http-helper'
 import { type Controller } from '../protocols/controller'
 import { type EmailValidator } from '../protocols/email-validator'
