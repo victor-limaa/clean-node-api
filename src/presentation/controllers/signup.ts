@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 import { type AddAccount } from '../../domain/usecases/add-account'
 import { InvalidParamError, MissingParamsError } from '../errors'
-import { badRequest, serverError } from '../helpers/http-helper'
+import { badRequest, serverError, success } from '../helpers/http-helper'
 import {
   type HttpRequest,
   type HttpResponse,
@@ -48,10 +48,7 @@ export class SignUpController implements Controller {
         password,
       })
 
-      return {
-        statusCode: 200,
-        body: account,
-      }
+      return success(account)
     } catch (error) {
       return serverError()
     }
