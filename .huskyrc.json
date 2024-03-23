@@ -1,6 +1,7 @@
 {
   "hooks": {
     "pre-commit": "lint-staged",
-    "commit-msg": "git-commit-msg-linter"
+    "commit-msg": "git-commit-msg-linter",
+    "pre-push": "npm run test:ci"
   }
 }
